@@ -14,18 +14,21 @@ C_RET=0
 SONG_NR=1
 TOTAL_MP3=0
 TOTAL_FLAC=0
+TOTAL_OGG=0
 TOTAL_ALL=0
 TOTAL_MOOD=0
 SONG_TOGO=0
 SONG_PERC=0
 TOTAL_MP3=`find "$DIR" -name "*.mp3" -print | wc -l`
 TOTAL_FLAC=`find "$DIR" -name "*.flac" -print | wc -l`
+TOTAL_OGG=`find "$DIR" -name "*.ogg" -print | wc -l`
 echo "$TOTAL_MP3 <<< Total MP3s"
 echo "$TOTAL_FLAC <<< Total FLACs"
-echo "$TOTAL_ALL <<< Total MP3s + FLACsC"
+echo "$TOTAL_OGG <<< Total OGGs"
+echo "$TOTAL_ALL <<< Total MP3s + FLACs + OGGs"
 TOTAL_MOOD=`find "$DIR" -name "*.mood" -print | wc -l`
 echo "$TOTAL_MOOD <<< Total MOODs processed already"
-SONG_TOGO=$(((TOTAL_MP3 + TOTAL_FLAC)-TOTAL_MOOD))
+SONG_TOGO=$(((TOTAL_MP3 + TOTAL_FLAC + TOTAL_OGG)-TOTAL_MOOD))
 echo "$SONG_TOGO <<< Total Files to process stil ..."
 #DISPLAY=:0 notify-send "MOODBAR" "Processings $SONG_TOGO songs ..."
 DISPLAY=:0 kdialog --passivepopup "Processings $SONG_TOGO songs ..."
