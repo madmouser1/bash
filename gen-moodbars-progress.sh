@@ -34,6 +34,8 @@ echo -e "    lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk"
 echo -e "    x                                                   x" 
 echo -e "    mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj"
 WRITE
+echo -e ""
+echo -e ""
 DIR=${1:-.}
 LAST=.moodbar-lastreadsong
 C_RET=0
